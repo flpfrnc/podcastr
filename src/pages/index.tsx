@@ -10,6 +10,7 @@ import { convertDurationToTimeString } from '../utils/convertDurationToTimeStrin
 
 import styles from './home.module.scss';
 import { usePlayer } from '../contexts/PlayerContext';
+import { useNightMode } from '../contexts/HeaderContext';
 
 
 type Episode = {
@@ -30,11 +31,12 @@ type HomeProps = {
 
 export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
   const { playList } = usePlayer();
+  const { isNightMode } = useNightMode();
 
   const episodeList = [...latestEpisodes, ...allEpisodes];
 
   return (
-    <div className={styles.homepage}>
+    <div className={isNightMode ? styles.nightHomepage : styles.homepage}>
       <Head>
         <title>Home | Podcastr</title>
       </Head>

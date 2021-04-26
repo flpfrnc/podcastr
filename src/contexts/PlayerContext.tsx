@@ -16,7 +16,7 @@ type PlayerContextData = {
     isShuffling: boolean;
     play: (episode: Episode) => void;
     playList: (list: Episode[], index: number) => void;
-    setPlayingState: (state: Boolean) => void;
+    setPlayingState: (state: boolean) => void;
     togglePlay: () => void;
     toggleLoop: () => void;
     toggleShuffle: () => void;

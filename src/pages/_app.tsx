@@ -5,18 +5,15 @@ import { Player } from '../components/Player';
 
 import styles from '../styles/app.module.scss';
 import { PlayerContextProvider } from '../contexts/PlayerContext'
-import { HeaderContextProvider, useNightMode } from '../contexts/HeaderContext';
+import { HeaderContextProvider } from '../contexts/HeaderContext';
 
 
 
 function MyApp({ Component, pageProps }) {
-  const { isNightMode } = useNightMode();
-
-  console.log(isNightMode);
   return (
     <HeaderContextProvider>
       <PlayerContextProvider>
-        <div className={isNightMode ? styles.wrapperNight : styles.wrapper}>
+        <div className={styles.wrapper}>
           <main>
             <Header />
             <Component {...pageProps} />

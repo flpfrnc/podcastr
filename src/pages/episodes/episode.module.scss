@@ -1,3 +1,20 @@
+.episodeNightContainer {
+    height: calc(100vh - 6.5rem);
+    background: #15202B;
+
+    h1 {
+        color: var(--gray-100);
+    }
+
+    span {
+        color: var(--gray-200);
+    }
+
+    p {
+        color: var(--gray-200);
+    }
+}
+
 .episode {
     max-width: 45rem;
     padding: 3rem 2rem;
